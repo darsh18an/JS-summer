@@ -39,3 +39,31 @@ const bigNumber = 511651656584656n;
  console.log(typeof myFunction);
 
  // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+//  ******************************************************************************8
+
+// stack (primitive, memory gives a copy)
+
+
+let name = "darshan";
+let anotherName = name;
+console.log(anotherName);
+    anotherName = "vision";
+console.log(name);
+console.log(anotherName);
+
+// Heap (non-primitive , gives accesss through reference)
+
+let userOne = {
+          email : "darshankn330@gmail.com",
+          upi : "da@ybl"
+}
+
+
+let userTwo = userOne;
+
+userTwo.email= "darsh18ankn@gmail.com";
+console.log(userOne.email);
+console.log(userTwo.email);
+
