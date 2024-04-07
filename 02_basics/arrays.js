@@ -40,14 +40,15 @@ const myArr2 = [1,2,3,4];
 
 // slice vs splice
 
-console.log("A ", myArr2);
+console.log("A ", myArr2); //A  [ 1, 2, 3, 4 ]
 // slice manuplates the copy of array not the original one  and end number is not included pre end number is taken
 const myNA = myArr2.slice(1,3);//[ 2, 3 ]
 
-console.log(myNA);
-console.log("B " ,myArr2);
+console.log(myNA); //[ 2, 3 ]
+console.log("B " ,myArr2); //B  [ 1, 2, 3, 4 ]
 // splice manuplates the original array and end number is included 
 const myNA1 = myArr2.splice(1,3);
-console.log(myNA1);
-console.log(("C ", myArr2));
+
+console.log("C ", myArr2); //C  [ 1 ]
+console.log(myNA1); // [ 2, 3, 4 ]
 
