@@ -53,4 +53,45 @@ function logginUserMessage(userName) {
   return `${userName} just logged in`;
 }
 // console.log(logginUserMessage("darshan"));
-console.log(logginUserMessage());
+// console.log(logginUserMessage());
+
+// function calculateCartPrice(...num1){
+//... act as rest operator  here ... depends on use case it may act as spread or rest operator
+//   return num1;
+// }
+// console.log(calculateCartPrice(200,800,900));//[ 200, 800, 900 ]
+
+function calculateCartPrice(val1, val2,...num1) {
+  //... act as rest operator  here ... depends on use case it may act as spread or rest operator
+  return num1;
+}
+// console.log(calculateCartPrice(200, 800, 900, 500,600));//[ 900, 500, 600 ]
+
+const user={
+  userName:"darshan",
+  price :548
+}
+
+// handel object
+// function handelObject(anyObject){
+//   console.log(`userName is ${anyObject.userName} and price is ${anyObject.price}`);
+// }
+// handelObject(user)
+
+// passing object
+// handelObject({
+//   userName:"sam",
+//   price:254
+// })
+// passing of array
+
+const myNewArray =[200,500,60,880,990];
+
+function secondvalue(getArray){
+  return getArray[1];
+}
+// console.log(secondvalue(myNewArray));
+console.log(secondvalue([500,600,800,900]));
+
+
+
