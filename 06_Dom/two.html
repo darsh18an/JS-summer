@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+  <div class="parent">
+    <div class="day">monday</div>
+    <div class="day">tuesday</div>
+    <div class="day">wednesday</div>
+    <div class="day">thursday</div>
+  </div>
+
+  
+</body>
+<script>
+  const parent =document.querySelector('.parent')
+  // console.log(parent);
+  // console.log(parent.children); // gives a HTMLCollection like arrray like structure
+  // console.log(parent.children[1]); // <div class ="day">tuesday</div.
+  // console.log(parent.children[1].innerHTML);//tuesday
+
+
+  for (let i = 0; i < parent.children.length; i++) {
+    // console.log(parent.children[i].innerHTML);// monday n/tuesday n/wednesday n/ thursday
+    
+  }
+
+  parent.children[1].style.color='orange';
+  // console.log(parent.firstElementChild.innerHTML);//monday
+  // console.log(parent.lastElementChild.innerHTML);//thursday
+
+  const dayOne = document.querySelector('.day')
+  // console.log(dayOne.innerHTML);//monday
+  // console.log(dayOne.parentElement);// <div class="parent">...</div>
+  // console.log(dayOne.parentNode);// <div class="parent">...</div>
+  // console.log(dayOne.nextElementSibling); //<div class="day" style="color: orange;">tuesday</div>
+
+  console.log("NODES: ",parent.childNodes); //node list(9) but we have only 4 div
+  // every ending tag also considerd as the node in this traversing tree
+</script>
+</html>
