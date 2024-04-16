@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+  <ul class="language">
+    <li>JavaScript</li>
+    
+  </ul>
+  
+</body>
+<script>
+
+  // ADD
+  function addLanguage(langName){
+    const li =document.createElement('li');
+    li.innerHTML = `${langName}`
+    document.querySelector('.language').appendChild(li);
+  }
+  addLanguage("python");
+  addLanguage("typeScript")
+  //  it traverse through the tree upto down everytime it cause optimisation issue
+
+  function optimisationAddLanguage(langName){
+    const li=document.createElement('li');
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector('.language').appendChild(li);
+  }
+
+  addLanguage("Java");
+  addLanguage("rust")
+
+  // EDIT
+
+  const secondLanguage =document.querySelector("li:nth-child(2)");
+  // secondLanguage.innerHTML = "Mojo";
+
+  // same optimastion problem
+
+  const li =document.createElement("li");
+  li.textContent = "Scala";
+  secondLanguage.replaceWith(li);
+
+  const firstLang = document.querySelector("li:first-child")
+   firstLang.outerHTML = '<li>c#</li>';
+
+  // Delete  Remove
+  const frs = document.querySelector("li:last-child");
+  frs.remove()
+
+  // w3 school mdn to practice further
+
+
+</script>
+</html>
